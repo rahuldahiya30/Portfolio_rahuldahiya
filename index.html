@@ -9,14 +9,17 @@
 <body>
 
     <!-- 🔹 Navbar -->
-    <nav>
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#certification">Certification</a></li>
-            <li><a href="#education">Education</a></li>
-        </ul>
-    </nav>
+    <header id="navbar">
+        <nav>
+            <ul>
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#certifications" class="nav-link">Certifications</a></li>
+                <li><a href="#education" class="nav-link">Education</a></li>
+            </ul>
+        </nav>
+    </header>
+    
 
     <!-- 🔹 Hero Section -->
     <section id="home">
@@ -42,35 +45,83 @@
         </video>
 
         <h2>Projects</h2>
-        <div class="carousel-container">
-            <div class="carousel">
-                <!-- 🔹 Project 1 -->
-                <div class="project-tile">
+        <div class="projects-container">
+            <div class="project-card">
+                <div class="project-image">
                     <img src="/Users/rahuldahiya/Desktop/Portfolio/Website/images/bcp.png" alt="Project 1">
-                    <div class="project-name">BCP & DR</div>
                 </div>
-                <!-- 🔹 Project 2 -->
-                <div class="project-tile">
-                    <img src="/Users/rahuldahiya/Desktop/Portfolio/Website/images/Average Satisfaction.png" alt="Project 2">
-                    <div class="project-name">Quality Assurance</div>
-                </div>
-                <!-- 🔹 Project 3 -->
-                <div class="project-tile">
-                    <img src="/Users/rahuldahiya/Desktop/Portfolio/Website/images/Phishing.png" alt="Project 3">
-                    <div class="project-name">Phishing Simulations</div>
-                </div>
-                <!-- 🔹 Project 4 -->
-                <div class="project-tile">
-                    <img src="/Users/rahuldahiya/Desktop/Portfolio/Website/images/Hardware.png" alt="Project 4">
-                    <div class="project-name">Hardware & Software Installations</div>
-                </div>
-                <!-- 🔹 Project 5 -->
-                <div class="project-tile">
-                    <img src="/Users/rahuldahiya/Desktop/Portfolio/Website/images/Moodle.png" alt="Project 5">
-                    <div class="project-name">Moodle (LMS)</div>
+                <div class="project-content">
+                    <h3>BCP & DR</h3>
+                    <p>In this project, I built BCP and Disaster recovery of the organization.</p>
+                    <div class="tech-stack">
+                        <span>Organization</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                    </div>
+                    <a href="#" class="project-link" target="_blank">View Project</a>
                 </div>
             </div>
-        </div>
+
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="/Users/rahuldahiya/Desktop/Portfolio/Website/images/Average Satisfaction.png" alt="Project 2">
+                </div>
+                <div class="project-content">
+                    <h3>Quality Assurance</h3>
+                    <p>A brief description of the project goes here.</p>
+                    <div class="tech-stack">
+                        <span>React</span>
+                        <span>Node.js</span>
+                        <span>MongoDB</span>
+                    </div>
+                    <a href="#" class="project-link" target="_blank">View Project</a>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="/Users/rahuldahiya/Desktop/Portfolio/Website/images/Phishing.png" alt="Project 2">
+                </div>
+                <div class="project-content">
+                    <h3>Phishing Campign</h3>
+                    <p>A brief description of the project goes here.</p>
+                    <div class="tech-stack">
+                        <span>React</span>
+                        <span>Node.js</span>
+                        <span>MongoDB</span>
+                    </div>
+                    <a href="#" class="project-link" target="_blank">View Project</a>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="/Users/rahuldahiya/Desktop/Portfolio/Website/images/Hardware.png" alt="Project 2">
+                </div>
+                <div class="project-content">
+                    <h3>Hardware & Software</h3>
+                    <p>A brief description of the project goes here.</p>
+                    <div class="tech-stack">
+                        <span>React</span>
+                        <span>Node.js</span>
+                        <span>MongoDB</span>
+                    </div>
+                    <a href="#" class="project-link" target="_blank">View Project</a>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="/Users/rahuldahiya/Desktop/Portfolio/Website/images/Moodle.png" alt="Project 2">
+                </div>
+                <div class="project-content">
+                    <h3>Moodle (Learning Managment System)</h3>
+                    <p>A brief description of the project goes here.</p>
+                    <div class="tech-stack">
+                        <span>React</span>
+                        <span>Node.js</span>
+                        <span>MongoDB</span>
+                    </div>
+                    <a href="#" class="project-link" target="_blank">View Project</a>
+                </div>
+            </div>
     </section>
     
 
@@ -184,17 +235,24 @@
     
 
     <!-- 🔹 Floating LinkedIn Badge -->
-    <div class="floating-linkedin-badge">
-        <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
-        <div class="badge-base LI-profile-badge" 
-             data-locale="en_US" 
-             data-size="medium" 
-             data-theme="light" 
-             data-type="VERTICAL" 
-             data-vanity="rahul-dahiya-225917160" 
-             data-version="v1">
-        </div>
+    <div id="contact-bar">
+        <a href="https://www.linkedin.com/in/rahul-dahiya-225917160/" target="_blank">
+            <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://github.com/rahuldahiya30" target="_blank">
+            <i class="fab fa-github"></i>
+        </a>
+        <a href="mailto:your-30rahuldahiya@gmail.com">
+            <i class="fas fa-envelope"></i>
+        </a>
     </div>
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+
+
+
 
     <script src="script.js"></script>
 </body>

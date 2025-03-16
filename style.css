@@ -12,32 +12,60 @@ body {
 }
 
 /* 🔹 Navbar */
-nav {
+/* Sticky, Glassmorphism Navbar */
+#navbar {
     position: fixed;
     top: 0;
-    width: 100%;
-    background: rgba(0, 0, 0, 0.8);
-    padding: 10px 0;
-    text-align: center;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 1200px;
+    background: rgba(255, 255, 255, 0.15); /* Glass effect */
+    backdrop-filter: blur(10px);
+    padding: 12px 20px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
     z-index: 1000;
+    transition: all 0.3s ease-in-out;
 }
 
+/* Navigation Items */
 nav ul {
     list-style: none;
     display: flex;
-    justify-content: center;
-    gap: 20px;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0;
+    padding: 0;
 }
 
 nav ul li {
     display: inline;
 }
 
-nav ul li a {
-    color: white;
+/* Navigation Links */
+.nav-link {
     text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
     padding: 10px 15px;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
 }
+
+/* Hover Effect */
+.nav-link:hover {
+    background: rgba(255, 255, 255, 0.3);
+    color: #00bcd4;
+}
+
+/* Active Section Highlight */
+.nav-link.active {
+    background: #00bcd4;
+    color: white;
+}
+
 /*Heroooooooooooooo*/
 /* 🔹 Hero Section */
 #home {
@@ -85,85 +113,48 @@ section {
 
 
 /*Projectssssssssssssss*/
-/* 🔹 Projects Section */
-#projects {
-    text-align: center;
-    padding: 50px 0;
-    background: #111; /* Dark background for contrast */
-    position: relative;
-    overflow: hidden; /*for video*/
-}
-#projects-video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    opacity: 0.5; /* Adjust transparency */
-    z-index: -1;
-}
-
-/* Ensures content stays above the video */
-#projects h2,
-.carousel-container {
-    
-    z-index: 1;
-}
-/* 🔹 Carousel Container */
-.carousel-container {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-    padding: 20px 0;
-}
-
-/* 🔹 Carousel (Holds the tiles) */
-.carousel {
+/* Ensure the project container uses a grid layout */
+.projects-container {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 20px;
-    white-space: nowrap;
-    transition: transform 0.2s linear;
+    padding: 40px 0;
 }
 
-/* 🔹 Project Tile - Like a Portrait */
-.project-tile {
-    position: relative;
-    min-width: 250px; /* Adjust size as needed */
-    height: 350px;
-    background: #222;
+/* Project Card */
+.project-card {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    padding: 20px;
+    width: 300px; /* Fixed width */
+    max-width: 90%;
+    text-align: center;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Project Image */
+.project-image img {
+    width: 100%;  /* Ensures image scales properly */
+    height: 200px; /* Fixed height */
+    object-fit: cover; /* Prevents distortion */
     border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.5);
     transition: transform 0.3s ease-in-out;
 }
 
-/* 🔹 Project Image */
-.project-tile img {
-    width: 100%;
-    height: 85%;
-    object-fit: cover; /* Ensures image fits like a painting */
-    border-bottom: 3px solid white; /* Adds a frame effect */
+/* Hover Effect */
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
 }
 
-/* 🔹 Project Name (Below Image) */
-.project-name {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    background: rgba(0, 0, 0, 0.8);
-    color: white;
-    text-align: center;
-    padding: 10px 0;
-    font-size: 1rem;
-    font-weight: bold;
-}
-
-/* 🔹 Hover Effect (Lifting effect) */
-.project-tile:hover {
+.project-card:hover .project-image img {
     transform: scale(1.05);
-    box-shadow: 0px 15px 20px rgba(255, 255, 255, 0.2);
 }
+
+
 
 /*Certification*/
 /* Certifications Section */
@@ -288,29 +279,35 @@ section {
     transform: rotateY(180deg);
 }
 
-
-
-
-
-
-
-
-/* 🔹 Floating LinkedIn Badge */
-.floating-linkedin-badge {
+/*Floating contact me bar*/
+#contact-bar {
     position: fixed;
-    bottom: 10px;
-    right: 10px;
-    z-index: 1000;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
-    padding: 5px;
-    opacity: 0.5;
-    transform: scale(0.8);
-    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    bottom: -70px; /* Initially hidden */
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(255, 255, 255, 0.2); /* Glass effect */
+    backdrop-filter: blur(12px);
+    padding: 15px 30px;
+    border-radius: 40px;
+    display: flex;
+    gap: 25px;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+    transition: bottom 0.4s ease-in-out;
+    z-index: 9999;
 }
 
-.floating-linkedin-badge:hover {
-    opacity: 1;
-    transform: scale(1);
+/* Icons */
+#contact-bar a {
+    color: white;
+    text-decoration: none;
+    font-size: 26px; /* Bigger Icons */
+    transition: transform 0.3s ease-in-out;
 }
+
+#contact-bar a:hover {
+    transform: scale(1.3);
+    color: #00bcd4;
+}
+

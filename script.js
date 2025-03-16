@@ -1,3 +1,31 @@
+/*navbar*/
+document.addEventListener("DOMContentLoaded", function () {
+    const sections = document.querySelectorAll("section");
+    const navLinks = document.querySelectorAll(".nav-link");
+
+    window.addEventListener("scroll", function () {
+        let current = "";
+
+        sections.forEach((section) => {
+            const sectionTop = section.offsetTop - 100;
+            if (window.scrollY >= sectionTop) {
+                current = section.getAttribute("id");
+            }
+        });
+
+        navLinks.forEach((link) => {
+            link.classList.remove("active");
+            if (link.getAttribute("href").includes(current)) {
+                link.classList.add("active");
+            }
+        });
+    });
+});
+
+
+
+
+
 /*Home Pageeeee*/
 const textElement = document.getElementById("typewriter-text");
 const texts = ["Hi, I'm Rahul Dahiya – IT Analyst | Career Advisor"];
@@ -34,44 +62,22 @@ document.addEventListener("DOMContentLoaded", () => {
 
 /*Projectssssss*/
 document.addEventListener("DOMContentLoaded", function () {
-    let projectsContainer = document.querySelector(".carousel"); // ✅ FIXED class name
-    let projectSection = document.querySelector("#projects"); // ✅ FIXED section selector
-    let projects = document.querySelectorAll(".project-tile");
+    const projects = document.querySelectorAll(".project-card");
 
-    let speed = 0; // Default speed (0 = no movement)
-    let animation;
-
-    // ✅ Mouse movement logic for controlling direction
-    projectSection.addEventListener("mousemove", function (e) {
-        let sectionWidth = projectSection.offsetWidth;
-        let mouseX = e.clientX - projectSection.getBoundingClientRect().left;
-        let centerX = sectionWidth / 2;
-        console.log("Mouse moving:", speed);
-
-
-        // ✅ Adjust speed based on cursor position
-        if (mouseX > centerX + 50) {
-            speed = (mouseX - centerX) / centerX * 20; // Move right
-        } else if (mouseX < centerX - 50) {
-            speed = -((centerX - mouseX) / centerX) * 20; // Move left
-        } else {
-            speed = 0; // Stop in center
-        }
-
-        // ✅ Apply movement animation
-        if (animation) animation.kill(); // Stop previous animation
-        animation = gsap.to(projectsContainer, {
-            xPercent: speed, // ✅ Use xPercent for better effect
-            duration: 1.5,
-            ease: "power2.out"
+    function checkScroll() {
+        projects.forEach((project) => {
+            const rect = project.getBoundingClientRect();
+            if (rect.top < window.innerHeight * 0.8) {
+                project.style.opacity = "1";
+                project.style.transform = "translateY(0)";
+            }
         });
-    });
+    }
 
-    // ✅ Stop movement when mouse leaves
-    projectSection.addEventListener("mouseleave", function () {
-        if (animation) animation.kill(); // Stop animation
-    });
+    window.addEventListener("scroll", checkScroll);
+    checkScroll();
 });
+
 
 
 /*certifications*/
@@ -83,6 +89,19 @@ document.querySelectorAll(".flip-card").forEach(card => {
     card.addEventListener("click", function () {
         this.querySelector(".flip-card-inner").classList.toggle("flipped");
     });
+});
+
+/*floating bar */
+let lastScrollY = window.scrollY;
+const contactBar = document.getElementById("contact-bar");
+
+window.addEventListener("scroll", function () {
+    if (window.scrollY > lastScrollY) {
+        contactBar.style.bottom = "20px"; // Show on scroll down
+    } else {
+        contactBar.style.bottom = "-70px"; // Hide on scroll up
+    }
+    lastScrollY = window.scrollY;
 });
 
 
