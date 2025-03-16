@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rahul Dahiya | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- 🔹 Navbar -->
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#certification">Certification</a></li>
+            <li><a href="#education">Education</a></li>
+        </ul>
+    </nav>
+
+    <!-- 🔹 Hero Section -->
+    <section id="home">
+        <!-- Background Video -->
+        <video autoplay loop muted playsinline id="hero-video">
+            <source src="/Users/rahuldahiya/Desktop/Portfolio/Website/videos/yt1z.net - Night City Skyline Highway Traffic in Toronto Timelapse (1080p).mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+        <!-- Hero Content -->
+        <div class="hero-content">
+            <h1 id="typewriter-text"></h1>
+        </div>
+    </section>
+
+
+    <!-- 🔹 Project Section -->
+    <section id="projects">
+        <!-- Background Video -->
+        <video autoplay loop muted playsinline id="projects-video">
+            <source src="/Users/rahuldahiya/Desktop/Portfolio/Website/videos/yt1z.net - Night City Skyline Highway Traffic in Toronto Timelapse (1080p).mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+        <h2>Projects</h2>
+        <div class="carousel-container">
+            <div class="carousel">
+                <!-- 🔹 Project 1 -->
+                <div class="project-tile">
+                    <img src="/Users/rahuldahiya/Desktop/Portfolio/Website/images/bcp.png" alt="Project 1">
+                    <div class="project-name">BCP & DR</div>
+                </div>
+                <!-- 🔹 Project 2 -->
+                <div class="project-tile">
+                    <img src="/Users/rahuldahiya/Desktop/Portfolio/Website/images/Average Satisfaction.png" alt="Project 2">
+                    <div class="project-name">Quality Assurance</div>
+                </div>
+                <!-- 🔹 Project 3 -->
+                <div class="project-tile">
+                    <img src="/Users/rahuldahiya/Desktop/Portfolio/Website/images/Phishing.png" alt="Project 3">
+                    <div class="project-name">Phishing Simulations</div>
+                </div>
+                <!-- 🔹 Project 4 -->
+                <div class="project-tile">
+                    <img src="/Users/rahuldahiya/Desktop/Portfolio/Website/images/Hardware.png" alt="Project 4">
+                    <div class="project-name">Hardware & Software Installations</div>
+                </div>
+                <!-- 🔹 Project 5 -->
+                <div class="project-tile">
+                    <img src="/Users/rahuldahiya/Desktop/Portfolio/Website/images/Moodle.png" alt="Project 5">
+                    <div class="project-name">Moodle (LMS)</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <section id="certifications">
+        <h2>Certifications</h2>
+        <div class="certification-container">
+            <div class="cert-card" onclick="toggleCard(this)">
+                <div class="card-header">
+                    <h3>2020 - AWS Certified Cloud Practitioner</h3>
+                    <span class="expand-icon">+</span>
+                </div>
+                <div class="card-body">
+                    <p>This certification validates cloud fluency and foundational AWS knowledge.</p>
+                </div>
+            </div>
+    
+            <div class="cert-card" onclick="toggleCard(this)">
+                <div class="card-header">
+                    <h3>2021 - Microsoft Azure Fundamentals</h3>
+                    <span class="expand-icon">+</span>
+                </div>
+                <div class="card-body">
+                    <p>Introductory certification to Microsoft Azure services, security, and workloads.</p>
+                </div>
+            </div>
+    
+            <div class="cert-card" onclick="toggleCard(this)">
+                <div class="card-header">
+                    <h3>2022 - Google Associate Cloud Engineer</h3>
+                    <span class="expand-icon">+</span>
+                </div>
+                <div class="card-body">
+                    <p>Demonstrates ability to deploy applications, monitor operations, and manage cloud solutions on Google Cloud.</p>
+                </div>
+            </div>
+    
+            <div class="cert-card" onclick="toggleCard(this)">
+                <div class="card-header">
+                    <h3>2023 - Cisco CCNA Certification</h3>
+                    <span class="expand-icon">+</span>
+                </div>
+                <div class="card-body">
+                    <p>Validates networking fundamentals, IP connectivity, security fundamentals, and automation.</p>
+                </div>
+            </div>
+    
+            <div class="cert-card" onclick="toggleCard(this)">
+                <div class="card-header">
+                    <h3>2024 - CompTIA Security+ Certification</h3>
+                    <span class="expand-icon">+</span>
+                </div>
+                <div class="card-body">
+                    <p>Focuses on core security functions, risk management, and network security.</p>
+                </div>
+            </div>
+    
+            <div class="cert-card" onclick="toggleCard(this)">
+                <div class="card-header">
+                    <h3>2025 - PMP Certification</h3>
+                    <span class="expand-icon">+</span>
+                </div>
+                <div class="card-body">
+                    <p>Globally recognized project management certification ensuring expertise in planning and execution.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+    
+    
+    
+    
+
+
+    <!-- 🔹 Education Section -->
+    <section id="education">
+        <h2>Education</h2>
+        <div class="education-container">
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <h3>Bachelor of Technology</h3>
+                        <p>Kurukshetra University</p>
+                        <p>2016 - 2020</p>
+                    </div>
+                    <div class="flip-card-back">
+                        <p>Major: Electronics & Telecommunication</p>
+                        <p>Relevant Coursework: Data Structures, Web Development, AI & ML</p>
+                        <p>Graduated with Honors</p>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <h3>Post Graduate Certificate</h3>
+                        <p>Loyalist College</p>
+                        <p>2021 - 2023</p>
+                    </div>
+                    <div class="flip-card-back">
+                        <p>Major: Cybersecurity</p>
+                        <p>Relevant Coursework: Ethical Hacking, Cloud Security, Risk Management</p>
+                        <p>Research on AI-driven Security</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <!-- 🔹 Floating LinkedIn Badge -->
+    <div class="floating-linkedin-badge">
+        <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
+        <div class="badge-base LI-profile-badge" 
+             data-locale="en_US" 
+             data-size="medium" 
+             data-theme="light" 
+             data-type="VERTICAL" 
+             data-vanity="rahul-dahiya-225917160" 
+             data-version="v1">
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
