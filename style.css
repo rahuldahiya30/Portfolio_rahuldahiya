@@ -114,6 +114,12 @@ section {
 
 /*Projectssssssssssssss*/
 /* Ensure the project container uses a grid layout */
+#projects {
+    background: linear-gradient(to right, #1a1a2e, #16213e);
+    padding: 60px 0;
+    color: white;
+}
+
 .projects-container {
     display: flex;
     flex-wrap: wrap;
@@ -158,6 +164,12 @@ section {
 
 /*Certification*/
 /* Certifications Section */
+#certifications {
+    background: radial-gradient(circle, #0f0c29, #302b63, #24243e);
+    padding: 60px 0;
+    color: white;
+}
+
 #certifications {
     text-align: center;
     padding: 50px;
@@ -226,6 +238,12 @@ section {
 }
 
 /*Education Section*/
+#education {
+    background: linear-gradient(135deg, #fdfbfb, #ebedee);
+    padding: 60px 0;
+    color: #333;
+}
+
 .education-container {
     display: flex;
     justify-content: center;
@@ -280,6 +298,13 @@ section {
 }
 
 /*Floating contact me bar*/
+#contact {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    padding: 60px 0;
+    color: black;
+}
+
 #contact-bar {
     position: fixed;
     bottom: -70px; /* Initially hidden */
