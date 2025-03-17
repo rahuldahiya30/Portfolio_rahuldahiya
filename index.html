@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rahul Dahiya | Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
 </head>
 <body>
 
@@ -36,10 +38,17 @@
     </section>
 
 
+
+    <div class="fade-transition"></div>
+    
+    <script defer src="script.js"></script>
+
+    
     <!-- 🔹 Project Section -->
     <section id="projects">
-
+        
         <div class="content">
+            <div id="particles-js"></div>
             <h2>Projects</h2>
             <div class="projects-container">
                 <div class="project-card">
@@ -108,70 +117,80 @@
         </div>            
     </section>
     
-
+    
+    <!-- 🔹 Certification Section -->
     <section id="certifications">
-        <h2>Certifications</h2>
-        <div class="certification-container">
-            <div class="cert-card" onclick="toggleCard(this)">
-                <div class="card-header">
-                    <h3>2020 - AWS Certified Cloud Practitioner</h3>
-                    <span class="expand-icon">+</span>
-                </div>
-                <div class="card-body">
-                    <p>This certification validates cloud fluency and foundational AWS knowledge.</p>
+        <div class="certification-section">
+            <div class="sparks-container"></div>  <!-- Wrapper for sparks -->
+            <h2 class="certification-title">Certifications</h2>
+            <div class="spark" style="left: 20%; top: 90%; animation-delay: 0.2s;"></div>
+            <div class="spark" style="left: 50%; top: 85%; animation-delay: 1s;"></div>
+            <div class="spark" style="left: 80%; top: 88%; animation-delay: 2s;"></div>
+            <div class="certification-content">
+
+                <div class="certification-container">
+                    <div class="cert-card" onclick="toggleCard(this)">
+                        <div class="card-header">
+                            <h3>2020 - AWS Certified Cloud Practitioner</h3>
+                            <span class="expand-icon">+</span>
+                        </div>
+                        <div class="card-body">
+                            <p>This certification validates cloud fluency and foundational AWS knowledge.</p>
+                        </div>
+                    </div>
+            
+                    <div class="cert-card" onclick="toggleCard(this)">
+                        <div class="card-header">
+                            <h3>2021 - Microsoft Azure Fundamentals</h3>
+                            <span class="expand-icon">+</span>
+                        </div>
+                        <div class="card-body">
+                            <p>Introductory certification to Microsoft Azure services, security, and workloads.</p>
+                        </div>
+                    </div>
+            
+                    <div class="cert-card" onclick="toggleCard(this)">
+                        <div class="card-header">
+                            <h3>2022 - Google Associate Cloud Engineer</h3>
+                            <span class="expand-icon">+</span>
+                        </div>
+                        <div class="card-body">
+                            <p>Demonstrates ability to deploy applications, monitor operations, and manage cloud solutions on Google Cloud.</p>
+                        </div>
+                    </div>
+            
+                    <div class="cert-card" onclick="toggleCard(this)">
+                        <div class="card-header">
+                            <h3>2023 - Cisco CCNA Certification</h3>
+                            <span class="expand-icon">+</span>
+                        </div>
+                        <div class="card-body">
+                            <p>Validates networking fundamentals, IP connectivity, security fundamentals, and automation.</p>
+                        </div>
+                    </div>
+            
+                    <div class="cert-card" onclick="toggleCard(this)">
+                        <div class="card-header">
+                            <h3>2024 - CompTIA Security+ Certification</h3>
+                            <span class="expand-icon">+</span>
+                        </div>
+                        <div class="card-body">
+                            <p>Focuses on core security functions, risk management, and network security.</p>
+                        </div>
+                    </div>
+            
+                    <div class="cert-card" onclick="toggleCard(this)">
+                        <div class="card-header">
+                            <h3>2025 - PMP Certification</h3>
+                            <span class="expand-icon">+</span>
+                        </div>
+                        <div class="card-body">
+                            <p>Globally recognized project management certification ensuring expertise in planning and execution.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-    
-            <div class="cert-card" onclick="toggleCard(this)">
-                <div class="card-header">
-                    <h3>2021 - Microsoft Azure Fundamentals</h3>
-                    <span class="expand-icon">+</span>
-                </div>
-                <div class="card-body">
-                    <p>Introductory certification to Microsoft Azure services, security, and workloads.</p>
-                </div>
-            </div>
-    
-            <div class="cert-card" onclick="toggleCard(this)">
-                <div class="card-header">
-                    <h3>2022 - Google Associate Cloud Engineer</h3>
-                    <span class="expand-icon">+</span>
-                </div>
-                <div class="card-body">
-                    <p>Demonstrates ability to deploy applications, monitor operations, and manage cloud solutions on Google Cloud.</p>
-                </div>
-            </div>
-    
-            <div class="cert-card" onclick="toggleCard(this)">
-                <div class="card-header">
-                    <h3>2023 - Cisco CCNA Certification</h3>
-                    <span class="expand-icon">+</span>
-                </div>
-                <div class="card-body">
-                    <p>Validates networking fundamentals, IP connectivity, security fundamentals, and automation.</p>
-                </div>
-            </div>
-    
-            <div class="cert-card" onclick="toggleCard(this)">
-                <div class="card-header">
-                    <h3>2024 - CompTIA Security+ Certification</h3>
-                    <span class="expand-icon">+</span>
-                </div>
-                <div class="card-body">
-                    <p>Focuses on core security functions, risk management, and network security.</p>
-                </div>
-            </div>
-    
-            <div class="cert-card" onclick="toggleCard(this)">
-                <div class="card-header">
-                    <h3>2025 - PMP Certification</h3>
-                    <span class="expand-icon">+</span>
-                </div>
-                <div class="card-body">
-                    <p>Globally recognized project management certification ensuring expertise in planning and execution.</p>
-                </div>
-            </div>
-        </div>
+        </div>     
     </section>
     
     
@@ -180,41 +199,46 @@
     
     
 
-
+    
     <!-- 🔹 Education Section -->
     <section id="education">
-        <h2>Education</h2>
-        <div class="education-container">
-            <div class="flip-card">
-                <div class="flip-card-inner">
-                    <div class="flip-card-front">
-                        <h3>Bachelor of Technology</h3>
-                        <p>Kurukshetra University</p>
-                        <p>2016 - 2020</p>
+        <div class="education-section">
+            <canvas id="starfield"></canvas> <!-- Canvas for Stars -->
+            <h2 class="education-title">Education</h2>
+            <div class="education-content">
+                <div class="education-container">
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <h3>Bachelor of Technology</h3>
+                                <p>Kurukshetra University</p>
+                                <p>2016 - 2020</p>
+                            </div>
+                            <div class="flip-card-back">
+                                <p>Major: Electronics & Telecommunication</p>
+                                <p>Relevant Coursework: Data Structures, Web Development, AI & ML</p>
+                                <p>Graduated with Honors</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="flip-card-back">
-                        <p>Major: Electronics & Telecommunication</p>
-                        <p>Relevant Coursework: Data Structures, Web Development, AI & ML</p>
-                        <p>Graduated with Honors</p>
+                
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <h3>Post Graduate Certificate</h3>
+                                <p>Loyalist College</p>
+                                <p>2021 - 2023</p>
+                            </div>
+                            <div class="flip-card-back">
+                                <p>Major: Cybersecurity</p>
+                                <p>Relevant Coursework: Ethical Hacking, Cloud Security, Risk Management</p>
+                                <p>Research on AI-driven Security</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        
-            <div class="flip-card">
-                <div class="flip-card-inner">
-                    <div class="flip-card-front">
-                        <h3>Post Graduate Certificate</h3>
-                        <p>Loyalist College</p>
-                        <p>2021 - 2023</p>
-                    </div>
-                    <div class="flip-card-back">
-                        <p>Major: Cybersecurity</p>
-                        <p>Relevant Coursework: Ethical Hacking, Cloud Security, Risk Management</p>
-                        <p>Research on AI-driven Security</p>
-                    </div>
-                </div>
-            </div>
-        </div>
+        </div>    
     </section>
     
 
@@ -239,5 +263,6 @@
 
 
     <script src="script.js"></script>
+    <script src="starfield.js"></script>
 </body>
 </html>
