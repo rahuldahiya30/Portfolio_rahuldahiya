@@ -89,6 +89,25 @@ document.addEventListener("DOMContentLoaded", () => {
     setTimeout(typeText, 500);
 });
 
+
+/* Work Experience*/
+// Ensure timeline content is revealed on hover
+const timelineDots = document.querySelectorAll('.timeline-dot');
+const timelineContents = document.querySelectorAll('.timeline-content');
+
+timelineDots.forEach((dot, index) => {
+    dot.addEventListener('mouseover', () => {
+        // Hide all content first
+        timelineContents.forEach(content => content.style.display = 'none');
+        // Show the hovered content
+        timelineContents[index].style.display = 'block';
+    });
+});
+
+
+
+
+
 /*Projectssssss*/
 document.addEventListener("DOMContentLoaded", function () {
     particlesJS("particles-js", {

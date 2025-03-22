@@ -131,6 +131,97 @@ section {
 }
 
 
+/*Work Experince*/
+/* Work Experience Section */
+#work-experience {
+    padding: 50px 0;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+#work-experience h2 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+/* Timeline container */
+.timeline {
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Timeline Item */
+.timeline-item {
+    position: relative;
+    width: 20%;
+    text-align: center;
+}
+
+.timeline-dot {
+    background-color: #4CAF50;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin: 0 auto;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.timeline-dot:hover {
+    transform: scale(1.2);
+    background-color: #2196F3; /* Change color on hover */
+}
+
+.timeline-dot span {
+    color: white;
+    font-size: 18px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Timeline Content */
+.timeline-content {
+    display: none;
+    position: absolute;
+    top: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 300px;
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.timeline-item:hover .timeline-content {
+    display: block;
+    opacity: 1;
+}
+
+/* Active Timeline Dot */
+.timeline-item:hover .timeline-dot {
+    background-color: #2196F3;
+}
+
+/* Adjusting for mobile responsiveness */
+@media (max-width: 768px) {
+    .timeline {
+        flex-direction: column;
+    }
+    .timeline-item {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+}
+
+
 /*Projectssssssssssssss*/
 /* Ensure the project container uses a grid layout */
 
